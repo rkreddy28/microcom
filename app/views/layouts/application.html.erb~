@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Microcom</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ 
+       
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+          <a class="brand" href="/"> <img src="assets/index.jpg"></a>
+      <a class="brand" href="#"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+            
+          <li><%= link_to("Home", { controller: "main", action: "home" }) %></li>
+          <li><%= link_to("Contact", { controller: "main", action: "contact_us" }) %></li>
+          <li><%= link_to("Team", { controller: "main", action: "team" }) %></li>
+          <li><%= link_to("Careers", { controller: "main", action: "career" }) %></li>
+
+        </ul>
+           <ul class="nav pull-right">
+           <li><li><%= link_to("login", { controller: "main", action: "login" }) %></li></li>
+           </ul>
+           <ul class="nav pull-right">
+            <li><li><%= link_to("signup", { controller: "main", action: "signup" }) %></li></li>
+             </ul>
+<ul class="nav pull-right">
+             <div class="span1">      
+            <li><li><%= link_to image_tag("f.png", :class => "facebook_icon", :alt => "Facebook"), "http://www.facebook.com/mypage", :target => "_blank" %> </li></li></div>
+<div class="span2">
+<li><li><%= link_to image_tag("t.png", :class => "twitter_icon", :alt => "Twitter"), "http://www.twitter.com/mypage", :target => "_blank" %> </li></li>
+
+</div>
+             </ul>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class=container>
+    <div class="row">
+    <div class="span4"><%= yield%></div>
+    <div class="span8"></div>
+
+
+    </div>
+</div>
+
+</body>
+
+</html>
